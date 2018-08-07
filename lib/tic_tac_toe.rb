@@ -34,8 +34,8 @@ def move(index, player = "X")
 end
 
 #position_taken?
-def position_taken?(board, index)
-  board[index]== "X" || board[index] == "O"
+def position_taken?(index)
+  @board[index]== "X" || @board[index] == "O"
 end
 
 end
