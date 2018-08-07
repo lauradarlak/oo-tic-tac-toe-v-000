@@ -85,4 +85,9 @@ def draw?
   !won? && full?
 end
 
+#over?
+def over?
+  won? || draw?
+end
+
 end
