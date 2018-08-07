@@ -43,17 +43,9 @@ def valid_move?(index)
   index.between?(0,8) && !position_taken?(index)
 end
 
-#turn
-def turn
-  puts "Please enter 1-9:"
-  user_input = gets.strip
-  index = input_to_index(user_input)
-  if valid_move?(index)
-    move(index, player = "X")
-    display_board
-  else
-    turn
-  end
+#turn_count
+def turn_count
+  @board.count{|token| token == "X" || token == "O"}
 end
 
 end
