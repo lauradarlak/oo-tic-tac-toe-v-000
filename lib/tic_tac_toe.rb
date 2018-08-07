@@ -80,4 +80,9 @@ def full?
   @board.all?{|token| token == "X" || token == "O"}
 end
 
+#draw?
+def draw?
+  !won? && full?
+end
+
 end
